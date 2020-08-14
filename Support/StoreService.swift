@@ -38,7 +38,7 @@ class StoreService {
         let dLon = UserDefaults.standard.double(forKey: "donkey.agro.region.dlon")
         
         if (lat == 0.0 && lon == 0.0) {
-            // Tokyo
+            // Tokyo 35.685 139.7514     Sacramento 38.86317 -121.388448
             return MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.685, longitude: 139.7514),
                                       span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         } else {
