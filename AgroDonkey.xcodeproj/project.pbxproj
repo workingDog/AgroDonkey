@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C70B5AA624D6CFB200EDE563 /* PolyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B5AA524D6CFB200EDE563 /* PolyInfoView.swift */; };
+		C70B5AA824D6D91B00EDE563 /* PolyListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B5AA724D6D91B00EDE563 /* PolyListRow.swift */; };
+		C71B165F24C3BCFB002A87A5 /* DonkeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B165E24C3BCFB002A87A5 /* DonkeyUtils.swift */; };
+		C71B166324C3BE83002A87A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B166224C3BE83002A87A5 /* HomeView.swift */; };
+		C71B51E224D7ED3D004BE427 /* SatelliteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B51E124D7ED3D004BE427 /* SatelliteView.swift */; };
+		C71DD9FC24DFDE6E00035DF2 /* ImageryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71DD9FB24DFDE6E00035DF2 /* ImageryRow.swift */; };
+		C71DD9FE24DFE38500035DF2 /* PolyImagery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71DD9FD24DFE38500035DF2 /* PolyImagery.swift */; };
+		C74152E524DED3E800CB62FF /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C74152E424DED3E800CB62FF /* readme.md */; };
+		C74152E724DED6FD00CB62FF /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C74152E624DED6FD00CB62FF /* LICENSE.txt */; };
+		C74CB9B924D7B89200DB4388 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74CB9B824D7B89200DB4388 /* DropDown.swift */; };
+		C76D92AF24DA1B060021140C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92AE24DA1B060021140C /* SettingsView.swift */; };
+		C76D92B124DA1C670021140C /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92B024DA1C670021140C /* StoreService.swift */; };
+		C76D92B524DA1CC20021140C /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92B324DA1CC20021140C /* KeychainWrapper.swift */; };
+		C76D92B624DA1CC20021140C /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92B424DA1CC20021140C /* KeychainItemAccessibility.swift */; };
+		C77305CC24C8253C00CCE901 /* GlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77305CB24C8253C00CCE901 /* GlassView.swift */; };
+		C775066924D3A929001A7D82 /* DonkeyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775066824D3A929001A7D82 /* DonkeyExtensions.swift */; };
+		C775066D24D3ABEF001A7D82 /* AgroPolyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775066C24D3ABEF001A7D82 /* AgroPolyMap.swift */; };
+		C77E474424DA396C009BE4B2 /* SatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E474324DA396C009BE4B2 /* SatImage.swift */; };
+		C79F713C24D64C5C003CEFD7 /* ToolsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79F713B24D64C5C003CEFD7 /* ToolsBar.swift */; };
+		C7A7965B24DEE68A006FEE13 /* picture1.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A7965724DEE68A006FEE13 /* picture1.png */; };
+		C7A7965C24DEE68A006FEE13 /* picture2.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A7965824DEE68A006FEE13 /* picture2.png */; };
+		C7A7965D24DEE68A006FEE13 /* picture3.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A7965924DEE68A006FEE13 /* picture3.png */; };
+		C7BBD1A324CDA16D00AEEE43 /* AgroAPI in Frameworks */ = {isa = PBXBuildFile; productRef = C7BBD1A224CDA16D00AEEE43 /* AgroAPI */; };
+		C7C4C5DF24C3BA0E00F932DF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4C5D924C3BA0E00F932DF /* MapView.swift */; };
+		C7C4C5E624C3BB2100F932DF /* LandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4C5E524C3BB2100F932DF /* LandModel.swift */; };
+		C7C6802A24DACF4E00374AE9 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C6802924DACF4E00374AE9 /* Messenger.swift */; };
+		C7DAF2A124DA3F1600051328 /* AgroImgRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DAF2A024DA3F1600051328 /* AgroImgRenderer.swift */; };
+		C7EEF6CB24C2DF7E0033B425 /* AgroDonkeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EEF6CA24C2DF7E0033B425 /* AgroDonkeyApp.swift */; };
+		C7EEF6CF24C2DF7F0033B425 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EEF6CE24C2DF7F0033B425 /* Assets.xcassets */; };
+		C7EEF6D224C2DF7F0033B425 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EEF6D124C2DF7F0033B425 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C70B5AA524D6CFB200EDE563 /* PolyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyInfoView.swift; sourceTree = "<group>"; };
+		C70B5AA724D6D91B00EDE563 /* PolyListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyListRow.swift; sourceTree = "<group>"; };
+		C71B165E24C3BCFB002A87A5 /* DonkeyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyUtils.swift; sourceTree = "<group>"; };
+		C71B166224C3BE83002A87A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C71B51E124D7ED3D004BE427 /* SatelliteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteView.swift; sourceTree = "<group>"; };
+		C71DD9FB24DFDE6E00035DF2 /* ImageryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryRow.swift; sourceTree = "<group>"; };
+		C71DD9FD24DFE38500035DF2 /* PolyImagery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyImagery.swift; sourceTree = "<group>"; };
+		C74152E424DED3E800CB62FF /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		C74152E624DED6FD00CB62FF /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		C745BE9224E38B5500A4DF55 /* AgroDonkey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AgroDonkey.entitlements; sourceTree = "<group>"; };
+		C74CB9B824D7B89200DB4388 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
+		C76D92AE24DA1B060021140C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C76D92B024DA1C670021140C /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		C76D92B324DA1CC20021140C /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		C76D92B424DA1CC20021140C /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		C77305CB24C8253C00CCE901 /* GlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassView.swift; sourceTree = "<group>"; };
+		C775066824D3A929001A7D82 /* DonkeyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyExtensions.swift; sourceTree = "<group>"; };
+		C775066C24D3ABEF001A7D82 /* AgroPolyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgroPolyMap.swift; sourceTree = "<group>"; };
+		C77E474324DA396C009BE4B2 /* SatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatImage.swift; sourceTree = "<group>"; };
+		C79F713B24D64C5C003CEFD7 /* ToolsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsBar.swift; sourceTree = "<group>"; };
+		C7A7965724DEE68A006FEE13 /* picture1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture1.png; sourceTree = "<group>"; };
+		C7A7965824DEE68A006FEE13 /* picture2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture2.png; sourceTree = "<group>"; };
+		C7A7965924DEE68A006FEE13 /* picture3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture3.png; sourceTree = "<group>"; };
+		C7C4C5D924C3BA0E00F932DF /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C7C4C5E524C3BB2100F932DF /* LandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandModel.swift; sourceTree = "<group>"; };
+		C7C6802924DACF4E00374AE9 /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		C7DAF2A024DA3F1600051328 /* AgroImgRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgroImgRenderer.swift; sourceTree = "<group>"; };
+		C7EEF6C724C2DF7E0033B425 /* AgroDonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgroDonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EEF6CA24C2DF7E0033B425 /* AgroDonkeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgroDonkeyApp.swift; sourceTree = "<group>"; };
+		C7EEF6CE24C2DF7F0033B425 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7EEF6D124C2DF7F0033B425 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7EEF6D324C2DF7F0033B425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7EEF6C424C2DF7E0033B425 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7BBD1A324CDA16D00AEEE43 /* AgroAPI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C71B166424C3BF26002A87A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C71B166224C3BE83002A87A5 /* HomeView.swift */,
+				C71B51E124D7ED3D004BE427 /* SatelliteView.swift */,
+				C77305CB24C8253C00CCE901 /* GlassView.swift */,
+				C79F713B24D64C5C003CEFD7 /* ToolsBar.swift */,
+				C70B5AA524D6CFB200EDE563 /* PolyInfoView.swift */,
+				C70B5AA724D6D91B00EDE563 /* PolyListRow.swift */,
+				C74CB9B824D7B89200DB4388 /* DropDown.swift */,
+				C76D92AE24DA1B060021140C /* SettingsView.swift */,
+				C7C4C5D924C3BA0E00F932DF /* MapView.swift */,
+				C71DD9FB24DFDE6E00035DF2 /* ImageryRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C76D92B224DA1CC20021140C /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				C76D92B324DA1CC20021140C /* KeychainWrapper.swift */,
+				C76D92B424DA1CC20021140C /* KeychainItemAccessibility.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		C775066724D3A910001A7D82 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C775066824D3A929001A7D82 /* DonkeyExtensions.swift */,
+				C76D92B024DA1C670021140C /* StoreService.swift */,
+				C71B165E24C3BCFB002A87A5 /* DonkeyUtils.swift */,
+				C7C6802924DACF4E00374AE9 /* Messenger.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C7A7965524DEE68A006FEE13 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C7A7965724DEE68A006FEE13 /* picture1.png */,
+				C7A7965824DEE68A006FEE13 /* picture2.png */,
+				C7A7965924DEE68A006FEE13 /* picture3.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C7C4C5E424C3BAF400F932DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7C4C5E524C3BB2100F932DF /* LandModel.swift */,
+				C775066C24D3ABEF001A7D82 /* AgroPolyMap.swift */,
+				C77E474324DA396C009BE4B2 /* SatImage.swift */,
+				C7DAF2A024DA3F1600051328 /* AgroImgRenderer.swift */,
+				C71DD9FD24DFE38500035DF2 /* PolyImagery.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7EEF6BE24C2DF7E0033B425 = {
+			isa = PBXGroup;
+			children = (
+				C7A7965524DEE68A006FEE13 /* Images */,
+				C74152E624DED6FD00CB62FF /* LICENSE.txt */,
+				C74152E424DED3E800CB62FF /* readme.md */,
+				C76D92B224DA1CC20021140C /* Keychain */,
+				C775066724D3A910001A7D82 /* Support */,
+				C71B166424C3BF26002A87A5 /* View */,
+				C7C4C5E424C3BAF400F932DF /* Model */,
+				C7EEF6C924C2DF7E0033B425 /* AgroDonkey */,
+				C7EEF6C824C2DF7E0033B425 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7EEF6C824C2DF7E0033B425 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7EEF6C724C2DF7E0033B425 /* AgroDonkey.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7EEF6C924C2DF7E0033B425 /* AgroDonkey */ = {
+			isa = PBXGroup;
+			children = (
+				C745BE9224E38B5500A4DF55 /* AgroDonkey.entitlements */,
+				C7EEF6CA24C2DF7E0033B425 /* AgroDonkeyApp.swift */,
+				C7EEF6CE24C2DF7F0033B425 /* Assets.xcassets */,
+				C7EEF6D324C2DF7F0033B425 /* Info.plist */,
+				C7EEF6D024C2DF7F0033B425 /* Preview Content */,
+			);
+			path = AgroDonkey;
+			sourceTree = "<group>";
+		};
+		C7EEF6D024C2DF7F0033B425 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C7EEF6D124C2DF7F0033B425 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7EEF6C624C2DF7E0033B425 /* AgroDonkey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7EEF6D624C2DF7F0033B425 /* Build configuration list for PBXNativeTarget "AgroDonkey" */;
+			buildPhases = (
+				C7EEF6C324C2DF7E0033B425 /* Sources */,
+				C7EEF6C424C2DF7E0033B425 /* Frameworks */,
+				C7EEF6C524C2DF7E0033B425 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AgroDonkey;
+			packageProductDependencies = (
+				C7BBD1A224CDA16D00AEEE43 /* AgroAPI */,
+			);
+			productName = Forest;
+			productReference = C7EEF6C724C2DF7E0033B425 /* AgroDonkey.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7EEF6BF24C2DF7E0033B425 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					C7EEF6C624C2DF7E0033B425 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = C7EEF6C224C2DF7E0033B425 /* Build configuration list for PBXProject "AgroDonkey" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7EEF6BE24C2DF7E0033B425;
+			packageReferences = (
+				C7BBD1A124CDA16D00AEEE43 /* XCRemoteSwiftPackageReference "AgroAPI" */,
+			);
+			productRefGroup = C7EEF6C824C2DF7E0033B425 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7EEF6C624C2DF7E0033B425 /* AgroDonkey */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7EEF6C524C2DF7E0033B425 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C74152E724DED6FD00CB62FF /* LICENSE.txt in Resources */,
+				C7EEF6D224C2DF7F0033B425 /* Preview Assets.xcassets in Resources */,
+				C7A7965C24DEE68A006FEE13 /* picture2.png in Resources */,
+				C74152E524DED3E800CB62FF /* readme.md in Resources */,
+				C7A7965B24DEE68A006FEE13 /* picture1.png in Resources */,
+				C7A7965D24DEE68A006FEE13 /* picture3.png in Resources */,
+				C7EEF6CF24C2DF7F0033B425 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7EEF6C324C2DF7E0033B425 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70B5AA824D6D91B00EDE563 /* PolyListRow.swift in Sources */,
+				C70B5AA624D6CFB200EDE563 /* PolyInfoView.swift in Sources */,
+				C71DD9FC24DFDE6E00035DF2 /* ImageryRow.swift in Sources */,
+				C77E474424DA396C009BE4B2 /* SatImage.swift in Sources */,
+				C775066924D3A929001A7D82 /* DonkeyExtensions.swift in Sources */,
+				C76D92B124DA1C670021140C /* StoreService.swift in Sources */,
+				C71B51E224D7ED3D004BE427 /* SatelliteView.swift in Sources */,
+				C77305CC24C8253C00CCE901 /* GlassView.swift in Sources */,
+				C71B166324C3BE83002A87A5 /* HomeView.swift in Sources */,
+				C71B165F24C3BCFB002A87A5 /* DonkeyUtils.swift in Sources */,
+				C76D92AF24DA1B060021140C /* SettingsView.swift in Sources */,
+				C76D92B524DA1CC20021140C /* KeychainWrapper.swift in Sources */,
+				C7C4C5E624C3BB2100F932DF /* LandModel.swift in Sources */,
+				C775066D24D3ABEF001A7D82 /* AgroPolyMap.swift in Sources */,
+				C7DAF2A124DA3F1600051328 /* AgroImgRenderer.swift in Sources */,
+				C7EEF6CB24C2DF7E0033B425 /* AgroDonkeyApp.swift in Sources */,
+				C7C6802A24DACF4E00374AE9 /* Messenger.swift in Sources */,
+				C79F713C24D64C5C003CEFD7 /* ToolsBar.swift in Sources */,
+				C71DD9FE24DFE38500035DF2 /* PolyImagery.swift in Sources */,
+				C74CB9B924D7B89200DB4388 /* DropDown.swift in Sources */,
+				C76D92B624DA1CC20021140C /* KeychainItemAccessibility.swift in Sources */,
+				C7C4C5DF24C3BA0E00F932DF /* MapView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C7EEF6D424C2DF7F0033B425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C7EEF6D524C2DF7F0033B425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7EEF6D724C2DF7F0033B425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AgroDonkey/AgroDonkey.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AgroDonkey/Preview Content\"";
+				DEVELOPMENT_TEAM = N7KF5K7NET;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/AgroDonkey/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ringo.agro.com.donkey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7EEF6D824C2DF7F0033B425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AgroDonkey/AgroDonkey.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AgroDonkey/Preview Content\"";
+				DEVELOPMENT_TEAM = N7KF5K7NET;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/AgroDonkey/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ringo.agro.com.donkey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7EEF6C224C2DF7E0033B425 /* Build configuration list for PBXProject "AgroDonkey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EEF6D424C2DF7F0033B425 /* Debug */,
+				C7EEF6D524C2DF7F0033B425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7EEF6D624C2DF7F0033B425 /* Build configuration list for PBXNativeTarget "AgroDonkey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EEF6D724C2DF7F0033B425 /* Debug */,
+				C7EEF6D824C2DF7F0033B425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7BBD1A124CDA16D00AEEE43 /* XCRemoteSwiftPackageReference "AgroAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/workingDog/AgroAPI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7BBD1A224CDA16D00AEEE43 /* AgroAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7BBD1A124CDA16D00AEEE43 /* XCRemoteSwiftPackageReference "AgroAPI" */;
+			productName = AgroAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C7EEF6BF24C2DF7E0033B425 /* Project object */;
+}

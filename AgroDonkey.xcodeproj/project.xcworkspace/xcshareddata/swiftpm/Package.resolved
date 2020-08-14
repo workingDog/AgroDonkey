@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AgroAPI",
+        "repositoryURL": "https://github.com/workingDog/AgroAPI.git",
+        "state": {
+          "branch": null,
+          "revision": "ca6a3b15fbc34e2b949eb63bbc89e32d07b7bab5",
+          "version": "0.1.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
