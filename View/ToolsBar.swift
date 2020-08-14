@@ -22,51 +22,93 @@ struct ToolsBar: View {
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @State private var color = Color.blue
 
-    @State private var isEditing = false
     @State private var editText = "Edit off"
+    @State var showsAlert = false
     
+
     var body: some View {
-        HStack {
-            polyTools
-            Spacer()
-            mapTools.padding(.top, DonkeyUtils.isiPhone ? -70 : 0)
-        }.frame(height: 130)
+        Group {
+            if DonkeyUtils.isiPhone {
+                VStack (alignment: .leading) {
+                    polyTools
+                    mapTools
+                }.frame(height: 160)
+            } else {
+                HStack {
+                    polyTools
+                    Spacer()
+                    mapTools
+                }.frame(height: 130)
+            }
+        }.padding(.horizontal, 5)
         .background(RoundedRectangle(cornerRadius: 15)
                         .stroke(lineWidth: 2)
                         .foregroundColor(Color.blue)
                         .background(Color(UIColor.systemGray6))
                         .padding(1))
         .clipShape(RoundedRectangle(cornerRadius: 15))
-        .padding(5)
         .contentShape(Rectangle())
+        .alert(isPresented: self.$showsAlert) {
+            Alert(title: Text("Delete " + land.touchedPolyName + "?"),
+                  message: Text("This action cannot be undone"),
+                  primaryButton: .destructive(Text("Delete")) { self.doDeletePoly() },
+                  secondaryButton: .cancel() { land.touchedPolyId = "" })
+        }
+        .onReceive(NotificationCenter.default.publisher(for: Messenger.agroNotification)) { messenger in
+            if let msg = messenger.object as? Messenger, ActionType.deletePoly == msg.actionType {
+                showsAlert = true
+            }
+        }
     }
     
     var mapTools: some View {
-        Picker(selection: Binding<Int> (
-            get: {self.mapType},
-            set: {
-                self.mapType = $0
-                self.land.mapType = self.getMapType()
-            }
-        ), label: Text("")) {
-            ForEach(0 ..< mapTypes.count) {
-                Text(self.mapTypes[$0])
-            }
-        }.pickerStyle(SegmentedPickerStyle()) 
-        .labelsHidden()
-        .frame(width: 170, height: 120)
-        .padding(5)
-        .clipped()
+        HStack {
+            if !DonkeyUtils.isiPhone {  Spacer() }
+            Picker(selection: Binding<Int> (
+                get: {self.mapType},
+                set: {
+                    self.mapType = $0
+                    self.land.mapType = self.getMapType()
+                }
+            ), label: Text("")) {
+                ForEach(0 ..< mapTypes.count) {
+                    Text(self.mapTypes[$0])
+                }
+            }.pickerStyle(SegmentedPickerStyle())
+            .labelsHidden()
+            .frame(width: 170, height: 50)
+            .clipped()
+            if DonkeyUtils.isiPhone {  Spacer() }
+        }
     }
     
     var polyTools: some View {
-        HStack (spacing: 15) {
+        HStack (spacing: 10) {
             editPolyButton
             addPolyButton
+            deletePolyButton
             Text(land.touchedPolyName).foregroundColor(.green)
-        }.padding(.horizontal, 5)
+        }.padding(5)
     }
     
+    var deletePolyButton: some View {
+        Button(action: {self.deletePoly()}) {
+            VStack {
+                Image(systemName: "flame")
+                    .resizable()
+                    .frame(width: 35, height: 35)
+                    .foregroundColor(land.isDeleting ? color : .blue)
+                    .onReceive(timer) { _ in
+                        if land.isDeleting {
+                            color = color == .blue ? .red : .blue
+                        }
+                    }
+                Text("Delete").font(.caption).foregroundColor(land.isDeleting ? color : .blue)
+            }.frame(width: 70, height: 70)
+        }.buttonStyle(GrayButtonStyle())
+        .scaleEffect(land.isDeleting ? 1.2 : 1.0)
+    }
+
     var editPolyButton: some View {
         Button(action: {self.doEditPoly()}) {
             VStack {
@@ -138,4 +180,26 @@ struct ToolsBar: View {
         }
     }
     
+    private func doDeletePoly() {
+        if let ndx = land.agroPolyMapList.firstIndex(where: { $0.id == land.touchedPolyId}) {
+            land.agroPolyMapList.remove(at: ndx)
+            // delete the polygon from the server
+            // land.agroProvider.deletePoly(id: land.touchedPolyId) { _ in }
+            land.touchedPolyId = ""
+            land.isDeleting = false
+        }
+    }
+    
+    private func deletePoly() {
+        land.isDeleting.toggle()
+        if land.isDeleting {
+            land.touchedPolyId = ""
+            showsAlert = false
+        } else {
+            if land.touchedPolyId != "" {
+                showsAlert = true
+            }
+        }
+    }
+
 }

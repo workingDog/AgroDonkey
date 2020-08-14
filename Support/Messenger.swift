@@ -14,6 +14,7 @@ enum ActionType: String {
     case adjustPoly
     case adjustAll
     case editPoly
+    case deletePoly
 }
 
 class Messenger {

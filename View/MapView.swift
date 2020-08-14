@@ -119,6 +119,9 @@ struct MapView: UIViewRepresentable  {
             // position on the map, CLLocationCoordinate2D
             let coordinate = self.theMap.mapView.convert(location, toCoordinateFrom: self.theMap.mapView)
             if let theAgro = self.theMap.land.findAgroAt(coordinate) {
+                // update the touchedPolyId
+                self.theMap.land.touchedPolyId = theAgro.id
+                
                 if self.theMap.land.allowEditing {
                     // tapped inside a polygon, turn-on editing mode for it
                     self.theMap.land.isEditing = true
@@ -126,8 +129,12 @@ struct MapView: UIViewRepresentable  {
                     NotificationCenter.default.post(name: Messenger.agroNotification,
                                                     object: Messenger(theAgro.id, actionType: .editPoly))
                 }
-                // update the touchedPolyId
-                self.theMap.land.touchedPolyId = theAgro.id
+
+                if self.theMap.land.isDeleting {
+                    // send a message to ToolsBar that this polygon was selected for deletion
+                    NotificationCenter.default.post(name: Messenger.agroNotification,
+                                                    object: Messenger(theAgro.id, actionType: .deletePoly))
+                }
             }
         }
         

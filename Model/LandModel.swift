@@ -50,6 +50,7 @@ class LandModel: ObservableObject {
     @Published var allowEditing = false
     @Published var isEditing = false
     @Published var isAdding = false
+    @Published var isDeleting = false
     @Published var polyIndexToEdit: Int? = nil
     // working temporary points when adding a new polygon
     @Published var points = [CGPoint]()
@@ -60,6 +61,8 @@ class LandModel: ObservableObject {
             // update the touchedPolyName
             if let poly = agroPolyMapList.first(where: {$0.id == touchedPolyId}) {
                 self.touchedPolyName = poly.agroPoly.name
+            } else {
+                self.touchedPolyName = ""
             }
         }
     }
@@ -83,7 +86,9 @@ class LandModel: ObservableObject {
             .compactMap{$0.object as? Messenger}
             .map{ $0 }
             .sink() { messenger in
+                
                 if messenger.actionType == .editPoly {
+                    print("\n----------> LandModel receiveMessage")
                     if let ndx = self.agroPolyMapList.firstIndex(where: {$0.id == messenger.polyId}) {
                         self.polyIndexToEdit = ndx
                     }
