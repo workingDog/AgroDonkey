@@ -21,10 +21,19 @@ struct PolyInfoView: View {
     @State var timeZone = TimeZone.current
 
     var body: some View {
-        VStack (spacing: 30) {
-            HStack {
-                fieldView
-                imageryView
+        VStack (spacing: 10) {
+            ScrollView {
+                if DonkeyUtils.isiPhone {
+                    VStack {
+                        fieldView
+                        imageryView
+                    }
+                } else {
+                    HStack {
+                        fieldView
+                        imageryView
+                    }
+                }
             }
             forecastView
         }
@@ -45,7 +54,7 @@ struct PolyInfoView: View {
                 ForEach(land.imagery, id: \.imagery.dt) { imgry in
                     ImageryRow(polyImagery: imgry)
                 }
-            }.frame(height: 333)
+            }.frame(height: 200)
         }
     }
     
@@ -103,7 +112,7 @@ struct PolyInfoView: View {
                             }
                 }
                 .onDelete(perform: delete)
-            }.frame(height: 333)
+            }.frame(height: 200)
         }
     }
     
