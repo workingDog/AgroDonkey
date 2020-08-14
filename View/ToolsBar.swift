@@ -52,7 +52,7 @@ struct ToolsBar: View {
             Alert(title: Text("Delete " + land.touchedPolyName + "?"),
                   message: Text("This action cannot be undone"),
                   primaryButton: .destructive(Text("Delete")) { self.doDeletePoly() },
-                  secondaryButton: .cancel() { land.touchedPolyId = "" })
+                  secondaryButton: .cancel() { land.touchedPolyId = ""; land.isDeleting = false })
         }
         .onReceive(NotificationCenter.default.publisher(for: Messenger.agroNotification)) { messenger in
             if let msg = messenger.object as? Messenger, ActionType.deletePoly == msg.actionType {
