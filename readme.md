@@ -32,7 +32,7 @@ Similarly, weather forecasts for the fields can be retrieved and presented.
 
 **AgroDonkey** has only 3 pages:
 
--  the map view for imagery display and polygons creation/editing,
+-  the map view for imagery display and polygons creation/editing/deleting,
 
 -  the field polygons and weather data info page, and
 
@@ -46,6 +46,8 @@ To add a new field, click the **Add** button and click the map to add points. Cl
 Note, the edge bewteen the last and first points will be added automatically, **no need to add the last point to close the polygon**.
 
 To edit a polygon, click the **Edit** button and then click on the desire polygon on the map. To exit editing, click on the polygon or the **Edit** button again.
+
+To delete a polygon, click the **Delete** button, then click on the desired polygon.
 
 On the **Info page**, you can rename and delete the desired fields (swipe left). You can also display the weather for a field, by clicking on the desired field in the list.
 
