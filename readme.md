@@ -11,7 +11,7 @@
 A satellite imagery app to showcase my [**AgroAPI**](https://github.com/workingDog/AgroAPI) swift library.
 This **AgroDonkey** app exercises the **Polygons API**, **Satellite Imagery API** and the **Agro weather API**.  
 
-Works on iPad iOS 14 and macOS 11 (untested), and requires a valid **OpenWeather/Agro API key**, see *Requirements*.
+Made for iPad iOS 14 and macOS 11 (untested), and requires a valid **OpenWeather/Agro API key**, see *Requirements*.
 
 ## Agro API
 
