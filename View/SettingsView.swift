@@ -43,7 +43,6 @@ struct SettingsView: View {
                 DatePicker("", selection: self.$land.startImageSearch, displayedComponents: .date).labelsHidden().datePickerStyle(CompactDatePickerStyle())
                 Spacer()
                 DatePicker("", selection: self.$land.endImageSearch, displayedComponents: .date).labelsHidden().datePickerStyle(CompactDatePickerStyle())
-                // GraphicalDatePickerStyle WheelDatePickerStyle  CompactDatePickerStyle
             }.frame(height: 50)
         }
     }

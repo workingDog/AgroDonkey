@@ -35,6 +35,7 @@ struct PolyInfoView: View {
                     }
                 }
             }
+            Divider()
             forecastView
         }
         .onAppear(perform: {land.agroPolyMapList.forEach {$0.selected = false}})
@@ -194,8 +195,7 @@ struct PolyInfoView: View {
         if let ndx = theIndexSet.first {
             let thePolyId = land.agroPolyMapList[ndx].id
             land.agroPolyMapList.remove(at: ndx)
-            print("\n----> PolyInfoView doDelete FAKE deleting server poly: \(thePolyId)")
-            // land.agroProvider.deletePoly(id: thePolyId) { _ in }
+            land.agroProvider.deletePoly(id: thePolyId) { _ in }
         }
     }
     

@@ -27,8 +27,7 @@ struct PolyListRow: View {
         .onAppear(perform: {polyName = thePoly.agroPoly.name})
         .onDisappear() {
             if polyName != thePoly.agroPoly.name {
-                print("\n----> PolyListRow updatePoly FAKE updating name on server: \(polyName)")
-                // self.land.agroProvider.updatePoly(id: thePoly.id, name: polyName) { _ in }
+                land.agroProvider.updatePoly(id: thePoly.id, name: polyName) { _ in }
             }
         }
     }

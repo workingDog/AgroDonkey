@@ -54,7 +54,7 @@ struct ToolsBar: View {
             }
         }.pickerStyle(SegmentedPickerStyle()) 
         .labelsHidden()
-        .frame(width: 200, height: 120)
+        .frame(width: 170, height: 120)
         .padding(5)
         .clipped()
     }
@@ -64,7 +64,7 @@ struct ToolsBar: View {
             editPolyButton
             addPolyButton
             Text(land.touchedPolyName).foregroundColor(.green)
-        }.padding(.horizontal, 10)
+        }.padding(.horizontal, 5)
     }
     
     var editPolyButton: some View {

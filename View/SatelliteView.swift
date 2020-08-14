@@ -31,7 +31,7 @@ struct SatelliteView: View {
                 VStack {
                     Text(land.satImgTypes[land.satImgType])
                     DropDown()
-                }
+                }.padding(.horizontal, 10)
                 if !DonkeyUtils.isiPhone { Spacer() }
             }.padding(.top, DonkeyUtils.isiPhone ? 50 : 20)
         }

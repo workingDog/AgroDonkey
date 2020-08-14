@@ -98,8 +98,8 @@ class LandModel: ObservableObject {
         agroProvider.getPolyList { response in
             if let polyArr = response {
                 self.agroPolyMapList = polyArr.map{AgroPolyMap(id: $0.id, name: $0.name, area: $0.area, feature: $0.geo_json)}
-                self.showPolyInfo()  // for testing
                 self.getAllImages()
+     //           self.showPolyInfo()  // for testing
      //           self.getAllImageryMeta()  // for testing
             }
         }
@@ -117,14 +117,12 @@ class LandModel: ObservableObject {
         if !isEditing {
             if msnger.actionType == .addPoly {
                 // adding a new polygon to the server
-                // addPoly(msnger.polyId)
-                print("\n----> LandModel processPoly FAKE adding new poly: \(msnger.polyId)")
+                addPoly(msnger.polyId)
             }
             
             if msnger.actionType == .adjustAll {
                 // adjusting an existing poygon
-                // updateServerPoly()
-                print("\n----> LandModel processPoly FAKE adjusting existing poly: \(msnger.polyId)")
+                updateServerPoly()
             }
         }
     }
@@ -140,7 +138,7 @@ class LandModel: ObservableObject {
                     if let response = resp {
                         // update our agroPoly id to match the id given by the server
                         poly.id = response.id
-                        // up to date
+                        // is now up to date
                         poly.hasChanged = false
                     }
                 }
