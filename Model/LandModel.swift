@@ -121,12 +121,12 @@ class LandModel: ObservableObject {
         if !isEditing {
             if msnger.actionType == .addPoly {
                 // adding a new polygon to the server
- //               addPoly(msnger.polyId)
+                addPoly(msnger.polyId)
             }
             
             if msnger.actionType == .adjustAll {
                 // adjusting an existing poygon
- //               updateServerPoly()
+                updateServerPoly()
             }
         }
     }
