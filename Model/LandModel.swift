@@ -72,9 +72,9 @@ class LandModel: ObservableObject {
     // to force a refresh of the screen
     @Published var refresh: Bool = false
     
-    @Published var mapPolyHandleColor = UIColor.red.withAlphaComponent(0.9)
-    @Published var mapPolyLineColor = UIColor.red.withAlphaComponent(0.9)
-    @Published var mapPolyFillColor = UIColor.magenta.withAlphaComponent(0.9)
+    @Published var mapPolyHandleColor = Color.red
+    @Published var mapPolyLineColor = Color.red
+    @Published var mapPolyFillColor = UIColor.magenta.withAlphaComponent(0.3)
     @Published var handleSize = CGFloat(30)
     
     var cancellables = Set<AnyCancellable>()
@@ -121,12 +121,12 @@ class LandModel: ObservableObject {
         if !isEditing {
             if msnger.actionType == .addPoly {
                 // adding a new polygon to the server
-                addPoly(msnger.polyId)
+ //               addPoly(msnger.polyId)
             }
             
             if msnger.actionType == .adjustAll {
                 // adjusting an existing poygon
-                updateServerPoly()
+ //               updateServerPoly()
             }
         }
     }

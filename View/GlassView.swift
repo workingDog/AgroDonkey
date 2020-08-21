@@ -40,7 +40,7 @@ struct GlassView: View {
                 ForEach(land.points.indices, id: \.self) { i in
                     markerDot(i)
                 }
-                drawLines().stroke(Color(land.mapPolyLineColor), style: StrokeStyle(lineWidth: 2, dash: [5]))
+                drawLines().stroke(land.mapPolyLineColor, style: StrokeStyle(lineWidth: 2, dash: [5]))
             }
             
             if land.isEditing {
@@ -48,7 +48,7 @@ struct GlassView: View {
                 if let ndx = land.polyIndexToEdit {
                     markerPolyDot(ndx)
                     drawPolyLines(land.agroPolyMapList[ndx].cgPoints)
-                        .stroke(Color(land.mapPolyLineColor), lineWidth: 2)
+                        .stroke(land.mapPolyLineColor, lineWidth: 2)
                 } else {
                   //  showPolies
                 }
@@ -62,13 +62,13 @@ struct GlassView: View {
     var showPolies: some View {
         ForEach(land.agroPolyMapList.indices, id: \.self) { x in
             markerPolyDot(x)
-            drawPolyLines(land.agroPolyMapList[x].cgPoints).stroke(Color(land.mapPolyLineColor), lineWidth: 2)
+            drawPolyLines(land.agroPolyMapList[x].cgPoints).stroke(land.mapPolyLineColor, lineWidth: 2)
         }
     }
     
     func markerPolyDot(_ x: Int) -> some View {
         ForEach(land.agroPolyMapList[x].cgPoints.indices, id: \.self) { i in
-            Circle().overlay(Circle().stroke(Color(land.mapPolyHandleColor), lineWidth: 5))
+            Circle().overlay(Circle().stroke(land.mapPolyHandleColor, lineWidth: 5))
                 .foregroundColor(clearColor)
                 .frame(width: land.handleSize, height: land.handleSize).position(land.agroPolyMapList[x].cgPoints[i])
                 .highPriorityGesture(dragGestureEdit(x, i))
@@ -100,7 +100,7 @@ struct GlassView: View {
     // ------------------------during adding----------------------------------------
     
     func markerDot(_ i: Int) -> some View {
-        Circle().overlay(Circle().stroke(Color(land.mapPolyHandleColor), lineWidth: 5))
+        Circle().overlay(Circle().stroke(land.mapPolyHandleColor, lineWidth: 5))
             .foregroundColor(clearColor)
             .frame(width: land.handleSize, height: land.handleSize).position(land.points[i])
             .highPriorityGesture(dragGestureAdd(i))
