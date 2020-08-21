@@ -39,7 +39,7 @@ class LandModel: ObservableObject {
             self.getAllImages()
         }
     }
-    let satTypes = ["Sentinel-2", "Landsat-8"]  // s2 or l8  (elle not eye)
+    let satTypes = ["Sentinel-2", "Landsat-8"]  // s2 or l8 
     // working temp imagery set, for imagery selection see PolyInfoView
     @Published var imagery = [PolyImagery]()
     
@@ -88,7 +88,6 @@ class LandModel: ObservableObject {
             .sink() { messenger in
                 
                 if messenger.actionType == .editPoly {
-                    print("\n----------> LandModel receiveMessage")
                     if let ndx = self.agroPolyMapList.firstIndex(where: {$0.id == messenger.polyId}) {
                         self.polyIndexToEdit = ndx
                     }

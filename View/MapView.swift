@@ -37,7 +37,7 @@ struct MapView: UIViewRepresentable  {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
-        let status = locationManager.authorizationStatus()
+        let status = locationManager.authorizationStatus
         #if !targetEnvironment(macCatalyst)
         if status == .authorizedAlways || status == .authorizedWhenInUse {
             if CLLocationManager.locationServicesEnabled() {

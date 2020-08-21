@@ -21,6 +21,7 @@ struct ToolsBar: View {
     
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @State private var color = Color.blue
+    @State private var prevTime = TimeInterval()
 
     @State private var editText = "Edit off"
     @State var showsAlert = false
@@ -98,9 +99,10 @@ struct ToolsBar: View {
                     .resizable()
                     .frame(width: 35, height: 35)
                     .foregroundColor(land.isDeleting ? color : .blue)
-                    .onReceive(timer) { _ in
-                        if land.isDeleting {
+                    .onReceive(timer) { t in
+                        if land.isDeleting && t.timeIntervalSince1970 > prevTime {
                             color = color == .blue ? .red : .blue
+                            prevTime = t.timeIntervalSince1970
                         }
                     }
                 Text("Delete").font(.caption).foregroundColor(land.isDeleting ? color : .blue)
@@ -116,12 +118,14 @@ struct ToolsBar: View {
                     .resizable()
                     .frame(width: 35, height: 35)
                     .foregroundColor(land.allowEditing ? color : .blue)
-                    .onReceive(timer) { _ in
-                        if land.allowEditing {
+                    .onReceive(timer) { t in
+                        if land.allowEditing && t.timeIntervalSince1970 > prevTime {
                             color = color == .blue ? .red : .blue
+                            prevTime = t.timeIntervalSince1970
                         }
                     }
-                Text(land.allowEditing ? "Edit on" : "Edit off").font(.caption).foregroundColor(land.allowEditing ? color : .blue)
+                Text(land.allowEditing ? "Edit on" : "Edit off").font(.caption)
+                    .foregroundColor(land.allowEditing ? color : .blue)
             }.frame(width: 70, height: 70)
         }.buttonStyle(GrayButtonStyle())
         .scaleEffect(land.allowEditing ? 1.2 : 1.0)
@@ -146,9 +150,10 @@ struct ToolsBar: View {
                     .resizable()
                     .frame(width: 35, height: 35)
                     .foregroundColor(land.isAdding ? color : .blue)
-                    .onReceive(timer) { _ in
-                        if land.isAdding {
+                    .onReceive(timer) { t in
+                        if land.isAdding && t.timeIntervalSince1970 > prevTime {
                             color = color == .blue ? .red : .blue
+                            prevTime = t.timeIntervalSince1970
                         }
                     }
                 Text("Add").font(.caption).foregroundColor(land.isAdding ? color : .blue)
@@ -184,7 +189,7 @@ struct ToolsBar: View {
         if let ndx = land.agroPolyMapList.firstIndex(where: { $0.id == land.touchedPolyId}) {
             land.agroPolyMapList.remove(at: ndx)
             // delete the polygon from the server
-            // land.agroProvider.deletePoly(id: land.touchedPolyId) { _ in }
+            land.agroProvider.deletePoly(id: land.touchedPolyId) { _ in }
             land.touchedPolyId = ""
             land.isDeleting = false
         }
